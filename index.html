@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Solar Purify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Solar Purify: Clean water, powered by the sun.">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="brand" onclick="showAboutModal()">Solar Purify</div>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="how.html">How it Works</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-switch" aria-label="Toggle Light/Dark Mode">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <svg class="bg-svg" viewBox="0 0 600 400" fill="none">
+      <ellipse cx="300" cy="200" rx="240" ry="120" fill="#4f46e5"/>
+      <ellipse cx="180" cy="80" rx="80" ry="40" fill="#22d3ee"/>
+      <ellipse cx="420" cy="320" rx="100" ry="50" fill="#fbbf24"/>
+    </svg>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Clean Water, Bright Future</h1>
+        <p>
+          Solar Purify delivers pure water using advanced solar-powered filtration.<br>
+          Empowering families and communities with sustainable health and independence.
+        </p>
+        <a href="how.html" class="button">See How It Works</a>
+      </div>
+      <div class="hero-image">
+        <div class="circle-bg"></div>
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+             alt="Clean Water" />
+      </div>
+    </section>
+
+    <h2 class="grid-section-title">Why Choose Solar Purify?</h2>
+    <section class="features">
+      <div class="feature-card">
+        <span class="icon">⚡</span>
+        <h3>Solar-Powered Efficiency</h3>
+        <p>Runs 100% on sunlight, no grid or generator required.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">💧</span>
+        <h3>Multi-Stage Filtration</h3>
+        <p>Removes bacteria, viruses, and chemicals to deliver safe drinking water.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">📱</span>
+        <h3>Smart Monitoring</h3>
+        <p>Track water purity and usage with real-time app updates.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">🛠️</span>
+        <h3>Easy Installation</h3>
+        <p>Fast setup, low maintenance, and supported by our global team.</p>
+      </div>
+      <div class="feature-card">
+        <span class="icon">🌎</span>
+        <h3>Scalable Solutions</h3>
+        <p>Perfect for homes, schools, clinics, and entire villages.</p>
+      </div>
+    </section>
+
+    <h2 class="grid-section-title">What Our Users Say</h2>
+    <section class="features">
+      <div class="feature-card">
+        <p>"We finally have clean water for our kids. Solar Purify is a blessing!"</p>
+        <span style="color:var(--primary);font-weight:600;">— Fatima, Kenya</span>
+      </div>
+      <div class="feature-card">
+        <p>"The app shows our water is safe every day. I feel secure."</p>
+        <span style="color:var(--primary);font-weight:600;">— Musa, Nigeria</span>
+      </div>
+      <div class="feature-card">
+        <p>"Setup was fast, support was great, and water is always pure."</p>
+        <span style="color:var(--primary);font-weight:600;">— Laila, Egypt</span>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal and Notifications (Chat Removed) -->
+  <div id="modal-overlay" style="opacity:0;">
+    <div id="modal">
+      <button id="modal-close" title="Close">&times;</button>
+      <div id="modal-title"></div>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <div id="notifications"></div>
+
+  <footer class="footer">
+    &copy; 2025 Solar Purify
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

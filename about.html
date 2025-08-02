@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Solar Purify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .team-member {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 6px;
+    }
+    .team-member img {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .team-member img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Modal styles */
+    #image-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    #image-modal img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 0 20px #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <div class="brand">Solar Purify</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how.html">How it Works</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="benefits.html">Benefits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="theme-switch" aria-label="Toggle Light/Dark Mode">🌙</button>
+    </nav>
+  </header>
+  <main>
+    <h2 class="grid-section-title">About Solar Purify</h2>
+    <section class="about-section">
+      <div class="about-card">
+        <h2>Our Mission</h2>
+        <p>
+          We believe clean water should be accessible for everyone. Solar Purify is dedicated to sustainable, affordable technology for healthier lives and a greener planet.
+        </p>
+      </div>
+      <div class="about-card">
+        <h2>Meet the Team</h2>
+        <div class="team-member">
+          <img id="nabeel-img" src="https://scontent-mba2-1.xx.fbcdn.net/v/t69.46293-2/525973360_1251636752799940_9016761855193539613_n.?stp=dst-jpg_p480x480_tt6&_nc_cat=106&ccb=1-7&_nc_sid=942482&_nc_ohc=tLGrLQHqKkAQ7kNvwE3feH2&_nc_oc=Adkco6ktWBr0MNmfZEHpfOWH0WGPH0QbHwLGLKQcXzNMJt_gCe7c3xXQsU5FTw5mgAE&_nc_zt=28&_nc_ht=scontent-mba2-1.xx&_nc_gid=nJ5ajXqXAUBEJGWm0I9_jw&oh=03_Q7cD2wESmEEdx2c-QWte5qkz4DFaf_Tp7qqa6EY5bmF26WjFGw&oe=688F9246" alt="Nabeel Abdulhamid">
+          <strong>Nabeel Abdulhamid</strong>: Project Manager / Content Specialist
+        </div>
+        <div class="team-member">
+          <img id="umar-img" src="https://scontent.fnbo9-1.fna.fbcdn.net/v/t1.15752-9/516859837_1280139943725705_3391479194839087146_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_ohc=TWNPXz8DufsQ7kNvwEHXIfa&_nc_oc=AdnjF3cyowovel-_kL6ap-HPrXaGSQ0tUGdOTgC6kn-zaHEwxCO6ERpjPukMOyT_8kM&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fnbo9-1.fna&oh=03_Q7cD2wGXgQNhjqeLgM9Xo8LcWS2LccNe_yjNSVxHFUMqPF8UTA&oe=68B33202" alt="Umar Kadir">
+          <strong>Umar Kadir</strong>: UI/UX Designer
+        </div>
+        <div class="team-member">
+          <img id="baishe-img" src="https://instagram.fnbo10-1.fna.fbcdn.net/v/t1.15752-9/521950391_1798031860922773_2078557532583927747_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0024fc&_nc_ohc=BM7yv9xGiRgQ7kNvwECGFWC&_nc_oc=AdkQPUUHweQFsnt3cC4tNAhCN1m0jitDrvRpNjBEDKe4c8ddhiPJGvHFKuAwrhpO-7I&_nc_zt=23&_nc_ht=instagram.fnbo10-1.fna&oh=03_Q7cD2wEhHHuFPVWruUzZDCpoTTKyCekn4RV-80xS-Ke2GUhoeQ&oe=68B3A0DA" alt="Baishe Hakim">
+          <strong>Baishe Hakim</strong>: Frontend Developer
+        </div>
+        <div class="team-member">
+          <img id="abdillahi-img" src="https://scontent.fnbo10-1.fna.fbcdn.net/v/t1.15752-9/526548406_1268811374633302_4093828705630070329_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=0024fc&_nc_ohc=1FX-me4PLUgQ7kNvwFYFn5i&_nc_oc=Adknbmke3aXfUFhGh_wkiyDIxARD26bp5EBWE8dV2Nzd2em3mNCntrPUzPGbS-BZflc&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fnbo10-1.fna&oh=03_Q7cD2wH1MVO_y10RjFWBaYF1Luyiy5G5KphtvssZF4a5JODiiw&oe=68B31E6E" alt="Abdillahi Abdilkheir">
+          <strong>Abdillahi Abdilkheir</strong>: Backend / Functionality Developer
+        </div>
+      </div>
+      <div class="about-card">
+        <h2>Our Impact</h2>
+        <p>
+          Thousands of families now enjoy reliable, safe water thanks to our projects. Each success story inspires us to do more.
+        </p>
+      </div>
+    </section>
+    <h2 class="grid-section-title">Values</h2>
+    <section class="about-section">
+      <div class="about-card">
+        <h2>Innovation</h2>
+        <p>
+          We embrace new technologies to solve the world's water challenges.
+        </p>
+      </div>
+      <div class="about-card">
+        <h2>Community</h2>
+        <p>
+          We partner locally to ensure every solution fits real needs.
+        </p>
+      </div>
+      <div class="about-card">
+        <h2>Sustainability</h2>
+        <p>
+          Our products protect the planet and empower future generations.
+        </p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    &copy; 2025 Solar Purify
+  </footer>
+
+  <!-- Modal for full image -->
+  <div id="image-modal">
+    <img id="modal-img" src="" alt="Full View">
+  </div>
+
+  <script>
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-img");
+
+    document.getElementById("nabeel-img").onclick = function () {
+      modal.style.display = "flex";
+      modalImg.src = this.src;
+    };
+    document.getElementById("umar-img").onclick = function () {
+      modal.style.display = "flex";
+      modalImg.src = this.src;
+    };
+    document.getElementById("baishe-img").onclick = function () {
+      modal.style.display = "flex";
+      modalImg.src = this.src;
+    };
+    document.getElementById("abdillahi-img").onclick = function () {
+      modal.style.display = "flex";
+      modalImg.src = this.src;
+    };
+
+    modal.onclick = function () {
+      modal.style.display = "none";
+    };
+  </script>
+  <script src="index.js"></script>
+</body>
+</html>
